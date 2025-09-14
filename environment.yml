@@ -1,0 +1,17 @@
+name: s2t
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyter
+  - langchain
+  - langchain-openai
+  - pip
+  - ffmpeg-python
+  - python-docx
+  - tqdm
+  - pip:
+      # Add any pip-only packages here
+      # Example: 
+      # - some-pip-package
