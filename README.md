@@ -17,16 +17,12 @@ We use OpenAI s2t models for transcriptions.
 
 ## Environment Setup
 
-Create the environment with:
+We use [uv](https://github.com/astral-sh/uv) for Python env + lock management.
 
-```bash
-conda env create -f environment.yml
-```
+1. Open the folder in VS Code and select “Reopen in Container”.
+2. Run `uv sync` inside the container to install packages.
+3. Run the notebook
 
-Activate the environment:
-
-```bash
-conda activate s2t
 ```
 
 ## Environment variables
@@ -38,8 +34,8 @@ OPENAI_API_KEY=your_openai_api_key_here
 ```
 ## Update Environment
 
-To update the environment after changing `environment.yml`:
+After changing `pyproject.toml`, run:
 
 ```bash
-conda env update -f environment.yml --prune
+uv sync
 ```

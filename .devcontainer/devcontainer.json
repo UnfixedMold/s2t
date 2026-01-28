@@ -1,0 +1,32 @@
+{
+  "name": "aitraf-dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "type=bind,source=${localWorkspaceFolder},target=/workspace",
+    "source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent.sock,type=bind"
+  ],
+  "remoteEnv": {
+    "SSH_AUTH_SOCK": "/ssh-agent.sock",
+    "UV_LINK_MODE": "symlink"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode"
+    },
+    "ghcr.io/devcontainers-extra/features/ffmpeg-apt-get:1": {},
+    "ghcr.io/devcontainer-community/devcontainer-features/astral.sh-uv:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff",
+        "openai.chatgpt",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
